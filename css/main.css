@@ -201,6 +201,99 @@ h1, h2, h3, h4, h5, h6 {
           -o-transition: 0.5s;
           transition: 0.5s; }
 
+.about-page {
+  width: 100vw;
+  background-color: #151515; }
+  .about-page__wrapper {
+    max-width: 1200px;
+    max-height: 520px;
+    margin: 0 auto;
+    background-color: #fff; }
+  .about-page__description {
+    height: 200px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .about-page__description_title {
+      width: 50%;
+      font-size: 80px;
+      padding: 70px 0 0 135px;
+      font-family: "MyriadProSemibold"; }
+      .about-page__description_title div:first-child {
+        color: #717171;
+        font-size: 24px;
+        height: 45px; }
+        .about-page__description_title div:first-child span {
+          font-size: 60px; }
+      .about-page__description_title div:last-child span {
+        color: #ffc600; }
+    .about-page__description_arcticle {
+      width: 50%;
+      padding: 35px 0 0 20px;
+      position: relative;
+      font-size: 14px;
+      color: #595959;
+      line-height: 1.2; }
+      .about-page__description_arcticle:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10%;
+        width: 1px;
+        height: 80%;
+        background-color: #c5c5c5; }
+      .about-page__description_arcticle p:first-child {
+        font-family: "MyriadProIt";
+        font-size: 16px;
+        color: #000;
+        margin-bottom: 25px; }
+  .about-page__categories {
+    padding: 60px 165px 55px 150px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .about-page__categories_type {
+      max-width: 240px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-bottom: 58px; }
+
+.logo {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 2px solid #ffa800;
+  background: #e8e8e8 url("../img/about_gamepad.png") center center no-repeat;
+  margin-bottom: 24px; }
+
+.title {
+  font-size: 18px;
+  font-family: "MyriadProRegular";
+  margin-bottom: 24px; }
+
+.decription {
+  font-family: "MyriadProIt";
+  font-size: 10px;
+  color: #242424;
+  text-align: center; }
+
 @media (max-width: 1281px) {
   .home-page {
     padding: 30px 20px 20px; }
