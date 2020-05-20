@@ -117,17 +117,17 @@ $semibold:'MyriadProSemibold';
 }
 
 
-@media (max-width: 1250px) {
+@media (max-width: 1281px) {
 	.home-page {
 		padding: 30px 20px 20px;
+		&__wrapper {
+			height: calc(100vh - 30px);
+		}
 		&__header {
 			padding-bottom: 30px;
 		}
 		&__header_title {
 			font-size: 150px;
-		}
-		&__content {
-			height: 50%;
 		}
 	}
 }
@@ -196,10 +196,11 @@ $semibold:'MyriadProSemibold';
 }
 @media (max-height: 900px) and (orientation: landscape) {
 	.home-page__header {
+		height: 45%;
 		padding-top: 50px;
 		justify-content: center;
 		&_title {
-		font-size: 180px;
+		font-size: 150px;
 		}
 	}
 } 
@@ -212,6 +213,9 @@ $semibold:'MyriadProSemibold';
 	}
 }
 @media (max-height: 550px) and (orientation: landscape) {
+	.home-page__header {
+		padding-bottom: 0;
+	}
 	.home-page__header_title {
 		font-size: 100px;
 	}
@@ -238,4 +242,15 @@ $semibold:'MyriadProSemibold';
 		}
 	}
 }
-
+@media (max-height: 400px) and (orientation: landscape) {
+.home-page__content_title {
+	font-size: 40px;
+	}
+.home-page__header_title {
+	font-size: 80px;
+	letter-spacing: -3px;
+}
+.home-page__header_subtitle {
+	font-size: 14px;
+}
+}

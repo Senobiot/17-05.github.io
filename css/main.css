@@ -201,15 +201,16 @@ h1, h2, h3, h4, h5, h6 {
           -o-transition: 0.5s;
           transition: 0.5s; }
 
-@media (max-width: 1250px) {
+@media (max-width: 1281px) {
   .home-page {
     padding: 30px 20px 20px; }
+    .home-page__wrapper {
+      height: -webkit-calc(100vh - 30px);
+      height: calc(100vh - 30px); }
     .home-page__header {
       padding-bottom: 30px; }
     .home-page__header_title {
-      font-size: 150px; }
-    .home-page__content {
-      height: 50%; } }
+      font-size: 150px; } }
 
 @media (max-width: 1024px) {
   .home-page__content_menu {
@@ -261,13 +262,14 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-height: 900px) and (orientation: landscape) {
   .home-page__header {
+    height: 45%;
     padding-top: 50px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
     .home-page__header_title {
-      font-size: 180px; } }
+      font-size: 150px; } }
 
 @media (max-height: 700px) and (orientation: landscape) {
   .home-page__header {
@@ -276,6 +278,8 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 150px; } }
 
 @media (max-height: 550px) and (orientation: landscape) {
+  .home-page__header {
+    padding-bottom: 0; }
   .home-page__header_title {
     font-size: 100px; }
   .home-page__header_subtitle {
@@ -308,3 +312,12 @@ h1, h2, h3, h4, h5, h6 {
       .home-page__content_menu a {
         font-size: 25px;
         text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5; } }
+
+@media (max-height: 400px) and (orientation: landscape) {
+  .home-page__content_title {
+    font-size: 40px; }
+  .home-page__header_title {
+    font-size: 80px;
+    letter-spacing: -3px; }
+  .home-page__header_subtitle {
+    font-size: 14px; } }
