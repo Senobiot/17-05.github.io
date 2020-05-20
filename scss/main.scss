@@ -129,7 +129,7 @@ $semibold:'MyriadProSemibold';
 		background-color: #fff;
 	}
 	&__description {
-		height: 200px;
+		min-height: 200px;
 		display: flex;
 		&_title {
 			width: 50%;
@@ -196,6 +196,21 @@ $semibold:'MyriadProSemibold';
 	border: 2px solid #ffa800;
 	background: #e8e8e8 url("../img/about_gamepad.png") center center no-repeat;
 	margin-bottom: 24px;
+	transition: 0.5s;
+	&:hover {
+		animation: shake 0.3s linear infinite;
+	}
+}
+@keyframes shake {
+	25% {
+		transform: rotate(45deg);
+	}
+	75% {
+		transform: rotate(-45deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
 }
 .title {
 	font-size: 18px;
@@ -226,13 +241,41 @@ $semibold:'MyriadProSemibold';
 			font-size: 150px;
 		}
 	}
+	.about-page {
+		padding: 0 20px;
+		&__description_arcticle {
+			padding-right: 20px;
+		}
+	}
+	.about-page__wrapper {
+		max-height: inherit;
+	}
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
 	.home-page__content_menu {
 		max-width: 90%;
 			& a {
 			font-size: 25px;
 			text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+		}
+	}
+	.about-page__description_title {
+		font-size: 60px;
+	}
+	.about-page__categories {
+		padding: 30px 30px;
+	}
+}
+@media (max-width: 850px) {
+	.about-page__description_title {
+		padding-left: 20px;
+		width: 47%;
+		font-size: 48px;
+	}
+	.about-page__description_arcticle {
+		width: 53%;
+		&:before {
+			top: 20%;
 		}
 	}
 }
@@ -253,12 +296,40 @@ $semibold:'MyriadProSemibold';
 			}
 		}
 	}
+	.about-page__categories_type {
+		width: 30%;
+	}
+	.decription {
+		text-align: justify;
+	}
 }
 
 @media (max-width: 550px){
 	.home-page__content_menu {
 			& a {
 			font-size: 20px;
+		}
+	}
+	.about-page__description {
+		flex-direction: column;
+		&_title {
+			width: 100%;
+			padding-top: 30px;
+			font-size: 60px;
+		}
+		&_arcticle {
+			width: 100%;
+		}
+	}
+	.about-page__categories {
+		flex-direction: column;
+			&_type {
+			width: 100%;
+			max-width: inherit;
+			margin-bottom: 20px;
+			& .decription {
+				font-size: 16px;
+			}
 		}
 	}
 }
@@ -288,6 +359,9 @@ $semibold:'MyriadProSemibold';
 			letter-spacing: 0;
 			margin-bottom: 20px;
 		}
+	}
+	.about-page__description_title {
+			font-size: 40px;
 	}
 }
 @media (max-height: 900px) and (orientation: landscape) {
