@@ -81,9 +81,33 @@
 	</section>
 	<!-- =========================================section WORKS-PAGE======================================= -->
 
-	<section class="works-page" id="main-page">
+	<section class="works-page" id="works-page">
+		<div class="works-page__wrapper">
+			<div class="works-page__title"><span>F</span>eatured <span>P</span>rojects</div>
+			<div class="works-page__filter-menu">
+				<div filter="all">all works</div>
+				<div filter="game">games</div>
+				<div filter="app">applications</div>
+				<div filter="cont">content development</div>
+			</div>
+			<div class="works-page__works">
+				<div class="works-page__works_work game"><img src="img/game-dev_work_game_1s.jpg" alt="work 1" large="img/game-dev_work_game_1L.jpg"></div>
+				<div class="works-page__works_work game"><img src="img/game-dev_work_game_2s.jpg" alt="work 2" large="img/game-dev_work_game_2L.jpg"></div>
+				<div class="works-page__works_work game"><img src="img/game-dev_work_game_3s.jpg" alt="work 3" large="img/game-dev_work_game_3L.jpg"></div>
+				<div class="works-page__works_work game"><img src="img/game-dev_work_game_4s.jpg" alt="work 4" large="img/game-dev_work_game_4L.jpg"></div>
+				<div class="works-page__works_work app"><img src="img/game-dev_work_app_1s.jpg" alt="work 5" large="img/game-dev_work_app_1L.jpg"></div>
+				<div class="works-page__works_work app"><img src="img/game-dev_work_app_2s.jpg" alt="work 6" large="img/game-dev_work_app_2L.jpg"></div>
+				<div class="works-page__works_work cont"><img src="img/game-dev_work_content_1s.jpg" alt="work 7" large="img/game-dev_work_content_1L.jpg"></div>
+				<div class="works-page__works_work cont"><img src="img/game-dev_work_content_2s.jpg" alt="work 8" large="img/game-dev_work_content_2L.jpg"></div>
+			</div>
+		</div>
+		<div class="popup-fade">
+			<div class="popup-window">
+				<div class="popup-close"></div>
+			</div>
+		</div>
 	</section>
-	<!-- =========================================section SERVICES-PAGE======================================= -->
+	<!-- =========================================section SERVICES-PAGE===================================== -->
 
 	<section class="services-page" id="main-page">
 	</section>
@@ -91,7 +115,7 @@
 
 	<section class="team-page" id="main-page">
 	</section>
-	<!-- =========================================section TESTIMONIALS-PAGE======================================= -->
+	<!-- =========================================section TESTIMONIALS-PAGE================================= -->
 
 	<section class="testimonials-page" id="main-page">
 	</section>
@@ -109,6 +133,34 @@
 	</section>
 
 	<!-- ================================================SCRIPTS============================================= -->
-	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".works-page__filter-menu div").click(function(){
+				let value = $(this).attr("filter");
+				let element = $(".works-page__works_work");
+				if (value == "all") {
+					$(element).css("opacity", "1").css("order", "0");
+				}
+				else {
+					$(element).not("."+value).css("opacity", "0.2").css("order", "1");
+					$(element).filter("."+value).css("opacity", "1").css("order", "-1");
+				}
+			});
+			$(".popup-close, .popup-fade").click(function(){
+				$(".popup-fade").fadeOut();
+			});
+			$(document).keydown(function(e) {
+				if (e.keyCode === 27) {
+				e.stopPropagation();
+				$('.popup-fade').fadeOut();
+			}
+			});
+			$(".works-page__works_work").click(function(){
+				$('.popup-fade').fadeIn();
+				let large = $(this).children().attr("large");
+				$('.popup-window').css({'background':'#fff url(' + large + ') no-repeat 50%/contain '});
+			});
+		});
+	</script>
 </body>
 </html>
