@@ -591,6 +591,84 @@ h1, h2, h3, h4, h5, h6 {
     .team-page__content__team__person_post {
       font-family: "MyriadProIt"; }
 
+.testimonials-page {
+  width: 100vw;
+  background-color: #151515; }
+  .testimonials-page__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #000;
+    color: #fff;
+    padding: 50px 70px 150px 50px; }
+  .testimonials-page__title:after {
+    width: 100px;
+    left: 75px; }
+  .testimonials-page__content {
+    display: none; }
+    .testimonials-page__content.active {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .testimonials-page__content__articles {
+      padding-top: 70px;
+      padding-right: 75px;
+      padding-left: 45px;
+      line-height: 1.2;
+      max-width: 75%; }
+      .testimonials-page__content__articles_main {
+        font-family: "MyriadProIt";
+        font-size: 16px;
+        margin-bottom: 20px; }
+      .testimonials-page__content__articles_subarticle {
+        font-family: "MyriadProRegular";
+        font-size: 14px; }
+    .testimonials-page__content__person {
+      font-size: 16px;
+      text-align: center; }
+      .testimonials-page__content__person_photo {
+        border-radius: 50%;
+        width: 128px;
+        overflow: hidden;
+        border: 3px solid #ffa800;
+        margin-bottom: 20px; }
+        .testimonials-page__content__person_photo img {
+          width: 100%; }
+      .testimonials-page__content__person_name {
+        font-family: "MyriadProSemibold";
+        margin-bottom: 5px; }
+      .testimonials-page__content__person_post {
+        font-family: "MyriadProIt"; }
+  .testimonials-page .slider-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .testimonials-page .slider-wrapper__dots {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: 100px;
+      width: 100%;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .testimonials-page .slider-wrapper__dots .dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        background-color: #000;
+        cursor: pointer;
+        margin-right: 8px; }
+        .testimonials-page .slider-wrapper__dots .dot.active {
+          background-color: #fff; }
+
 @media (max-width: 1281px) {
   .home-page {
     padding: 30px 20px 20px; }
@@ -618,7 +696,13 @@ h1, h2, h3, h4, h5, h6 {
   .team-page {
     padding: 0 20px; }
     .team-page__wrapper {
-      padding-right: 20px; } }
+      padding-right: 20px; }
+  .testimonials-page {
+    padding: 0 20px; }
+    .testimonials-page__wrapper {
+      padding-right: 20px; }
+  .testimonials-page .slider-wrapper__dots {
+    margin-top: 20px; } }
 
 @media (max-width: 1025px) {
   .home-page__content_menu {
@@ -682,7 +766,13 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 5px; }
   .services-page__content {
     padding-left: 80px;
-    padding-right: 20px; } }
+    padding-right: 20px; }
+  .testimonials-page__wrapper {
+    padding-bottom: 30px; }
+  .testimonials-page__content__articles {
+    padding-top: 10px; }
+  .testimonials-page .slider-wrapper__dots {
+    margin-top: 30px; } }
 
 @media (max-width: 700px) {
   .home-page__header_title {
@@ -751,7 +841,12 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 100%;
     margin-bottom: 40px; }
   .team-page__wrapper {
-    padding: 20px 10px; } }
+    padding: 20px 10px; }
+  .testimonials-page__wrapper {
+    padding: 20px 10px; }
+  .testimonials-page__content__articles {
+    padding-left: 10px;
+    padding-right: 10px; } }
 
 @media (max-width: 450px) {
   .home-page__header {
@@ -825,7 +920,18 @@ h1, h2, h3, h4, h5, h6 {
   .works-page__works_work {
     max-width: 100%; }
   .team-page__content__team__person {
-    width: 98%; } }
+    width: 98%; }
+  .testimonials-page__content {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .testimonials-page__content__articles {
+      max-width: 100%;
+      margin-bottom: 10px; } }
 
 @media (max-height: 900px) and (orientation: landscape) {
   .home-page__header {

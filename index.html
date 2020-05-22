@@ -209,7 +209,57 @@
 	</section>
 	<!-- =========================================section TESTIMONIALS-PAGE================================= -->
 
-	<section class="testimonials-page" id="main-page">
+	<section class="testimonials-page" id="testimonials-page">
+		<div class="testimonials-page__wrapper">
+			<div class="testimonials-page__title page-titles"><span>T</span>estimonials</div>
+			<div class="slider-wrapper">
+				<div class="testimonials-page__content active">
+					<div class="testimonials-page__content__articles">
+						<div class="testimonials-page__content__articles_main">Later known throughout the galaxy as "The Shepard"—is a legendary N7 soldier in the Systems Alliance military, the first human Spectre, and the main protagonist of the Mass Effect trilogy.</div>
+						<div class="testimonials-page__content__articles_subarticle">Born in Vancouver in 2154, he had a difficult childhood but was able to escape the life of petty crime and underworld gangs upon enlisting in the Alliance Navy. </div>
+					</div>
+					<div class="testimonials-page__content__person">
+						<div class="testimonials-page__content__person_photo"><img src="img/game-dev_team-1.jpg" alt=""></div>
+						<div class="testimonials-page__content__person_name">John Sheppard</div>
+						<div class="testimonials-page__content__person_post">CoFounder / CEO</div>
+					</div>
+				</div>
+				<div class="testimonials-page__content">
+					<div class="testimonials-page__content__articles">
+						<div class="testimonials-page__content__articles_main"> Miranda is a former high-ranking Cerberus operative and biotic who used initially served as one of the Illusive Man's top agents and Commander John Shepard's second-in-command during the Collector crisis.</div>
+						<div class="testimonials-page__content__articles_subarticle">A very well informant with many contacts, Miranda's range of contacts extend from Citadel space and the Terminus Systems, to as far as the hostile Nemean Abyss. </div>
+					</div>
+					<div class="testimonials-page__content__person">
+						<div class="testimonials-page__content__person_photo"><img src="img/game-dev_team-2.jpg" alt=""></div>
+						<div class="testimonials-page__content__person_name">Miranda Lawson</div>
+						<div class="testimonials-page__content__person_post">Process Manager</div>
+				</div>
+				</div>
+				<div class="testimonials-page__content">
+					<div class="testimonials-page__content__articles">
+						<div class="testimonials-page__content__articles_main">Garrus Vakarian is a turian, formerly part of C-Sec's Investigation Division. Like most turians, Garrus had his military training at fifteen, but later followed in his father's footsteps to become a C-Sec officer.</div>
+						<div class="testimonials-page__content__articles_subarticle">He was responsible for the investigation of Saren Arterius, the Council's top Spectre, after the Alliance claimed Saren had gone rogue. </div>
+					</div>
+					<div class="testimonials-page__content__person">
+						<div class="testimonials-page__content__person_photo"><img src="img/game-dev_team-3.jpg" alt=""></div>
+						<div class="testimonials-page__content__person_name">Garrus Vakarian</div>
+						<div class="testimonials-page__content__person_post">Sales President</div>
+					</div>
+				</div>
+				<div class="testimonials-page__content">
+					<div class="testimonials-page__content__articles">
+						<div class="testimonials-page__content__articles_main">Dr. Liara T'Soni is an asari researcher who has spent the past fifty years of her life studying Prothean technology and culture, specialising in the Prothean extinction.</div>
+						<div class="testimonials-page__content__articles_subarticle"> She was born on Thessia in 2077, making her "only" 106—barely an adult in asari terms. </div>
+					</div>
+					<div class="testimonials-page__content__person">
+						<div class="testimonials-page__content__person_photo"><img src="img/game-dev_team-4.jpg" alt=""></div>
+						<div class="testimonials-page__content__person_name">Liara T'Soni</div>
+						<div class="testimonials-page__content__person_post">Developer</div>
+					</div>
+				</div>
+				<div class="slider-wrapper__dots"></div>
+			</div>
+		</div>
 	</section>
 	<!-- =========================================section BLOG-PAGE======================================= -->
 
@@ -252,6 +302,25 @@
 				let large = $(this).children().attr("large");
 				$('.popup-window').css({'background':'#fff url(' + large + ') no-repeat 50%/contain '});
 			});
+
+			let slider_qty = $(".testimonials-page__content").length;
+			console.log(slider_qty);
+			let i;
+			for ( i = 0; i < slider_qty; i++) {
+				if (i==0) {
+					$(".slider-wrapper__dots").append("<div class='dot active'></div>");
+				} else {
+					$(".slider-wrapper__dots").append("<div class='dot'></div>");
+				}
+			};
+			$(".dot").click(function(){
+				let num=$(this).index();
+				let num_slide = $(".slider-wrapper").children(".testimonials-page__content");
+				$(".slider-wrapper .active").removeClass("active");
+				$(num_slide[num]).addClass("active");
+				$(".slider-wrapper__dots .active").removeClass("active");
+				$(this).addClass("active");
+			})
 		});
 	</script>
 </body>
