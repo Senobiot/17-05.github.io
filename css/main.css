@@ -538,6 +538,59 @@ h1, h2, h3, h4, h5, h6 {
     .services-page__content__category_article {
       font-size: 11px; }
 
+.team-page {
+  width: 100vw;
+  background-color: #151515; }
+  .team-page__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 85px 70px 150px 50px; }
+  .team-page__title {
+    width: 25%;
+    height: 50px; }
+    .team-page__title:after {
+      left: 75px;
+      width: 70px; }
+  .team-page__content {
+    line-height: 1.2; }
+    .team-page__content_title {
+      font-family: "MyriadProIt";
+      font-size: 16px;
+      margin-bottom: 25px;
+      width: 75%; }
+    .team-page__content_subtitle {
+      font-family: "MyriadProRegular";
+      font-size: 14px;
+      color: #595959;
+      margin-bottom: 35px;
+      width: 75%; }
+    .team-page__content__team {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    .team-page__content__team__person {
+      width: 23%;
+      font-size: 16px;
+      text-align: center; }
+    .team-page__content__team__person_photo img {
+      width: 100%; }
+    .team-page__content__team__person_name {
+      font-family: "MyriadProSemibold";
+      padding-top: 15px;
+      padding-bottom: 5px; }
+    .team-page__content__team__person_post {
+      font-family: "MyriadProIt"; }
+
 @media (max-width: 1281px) {
   .home-page {
     padding: 30px 20px 20px; }
@@ -561,7 +614,11 @@ h1, h2, h3, h4, h5, h6 {
   .services-page {
     padding: 0 20px; }
   .services-page__content {
-    padding-left: 300px; } }
+    padding-left: 300px; }
+  .team-page {
+    padding: 0 20px; }
+    .team-page__wrapper {
+      padding-right: 20px; } }
 
 @media (max-width: 1025px) {
   .home-page__content_menu {
@@ -585,7 +642,17 @@ h1, h2, h3, h4, h5, h6 {
       margin-bottom: 5px; }
   .services-page__content {
     padding-left: 180px;
-    padding-right: 100px; } }
+    padding-right: 100px; }
+  .team-page__wrapper {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .team-page__title {
+    width: 100%; }
+  .team-page__content_title, .team-page__content_subtitle {
+    width: 100%; } }
 
 @media (max-width: 850px) {
   .about-page__description_title {
@@ -682,7 +749,9 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 10px; }
   .services-page__content__category {
     max-width: 100%;
-    margin-bottom: 40px; } }
+    margin-bottom: 40px; }
+  .team-page__wrapper {
+    padding: 20px 10px; } }
 
 @media (max-width: 450px) {
   .home-page__header {
@@ -719,7 +788,13 @@ h1, h2, h3, h4, h5, h6 {
       left: 112px; }
   .works-page__filter-menu {
     padding-left: 10px;
-    padding-right: 5px; } }
+    padding-right: 5px; }
+  .team-page__content__team {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .team-page__content__team__person {
+      width: 49%; } }
 
 @media (max-width: 350px) {
   .home-page__header_title {
@@ -748,7 +823,9 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 2.5;
     font-size: 18px; }
   .works-page__works_work {
-    max-width: 100%; } }
+    max-width: 100%; }
+  .team-page__content__team__person {
+    width: 98%; } }
 
 @media (max-height: 900px) and (orientation: landscape) {
   .home-page__header {
