@@ -502,6 +502,42 @@ h1, h2, h3, h4, h5, h6 {
       font-family: "MyriadProRegular";
       color: #595959; }
 
+.services-page {
+  width: 100vw;
+  background-color: #151515; }
+  .services-page__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+    padding: 40px 0 55px 50px;
+    background: url("../img/game-dev_services-bg.jpg") 50%/cover no-repeat; }
+  .services-page__content {
+    padding: 40px 180px 0 470px;
+    min-height: 300px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-content: space-between;
+        -ms-flex-line-pack: justify;
+            align-content: space-between; }
+    .services-page__content__category {
+      max-width: 225px;
+      line-height: 1.2;
+      font-family: "MyriadProRegular"; }
+    .services-page__content__category_title {
+      font-size: 18px;
+      margin-bottom: 20px; }
+    .services-page__content__category_article {
+      font-size: 11px; }
+
 @media (max-width: 1281px) {
   .home-page {
     padding: 30px 20px 20px; }
@@ -521,7 +557,11 @@ h1, h2, h3, h4, h5, h6 {
   .works-page {
     padding: 0 20px; }
   .strategic-page {
-    padding: 0 20px; } }
+    padding: 0 20px; }
+  .services-page {
+    padding: 0 20px; }
+  .services-page__content {
+    padding-left: 300px; } }
 
 @media (max-width: 1025px) {
   .home-page__content_menu {
@@ -542,7 +582,10 @@ h1, h2, h3, h4, h5, h6 {
   .strategic-page__content__block__description {
     padding: 10px 10px 0; }
     .strategic-page__content__block__description_title {
-      margin-bottom: 5px; } }
+      margin-bottom: 5px; }
+  .services-page__content {
+    padding-left: 180px;
+    padding-right: 100px; } }
 
 @media (max-width: 850px) {
   .about-page__description_title {
@@ -569,7 +612,10 @@ h1, h2, h3, h4, h5, h6 {
         .strategic-page__content__block__description_title span {
           font-size: 24px; }
       .strategic-page__content__block__description_subtitle {
-        margin-bottom: 5px; } }
+        margin-bottom: 5px; }
+  .services-page__content {
+    padding-left: 80px;
+    padding-right: 20px; } }
 
 @media (max-width: 700px) {
   .home-page__header_title {
@@ -582,7 +628,11 @@ h1, h2, h3, h4, h5, h6 {
   .about-page__categories_type {
     width: 30%; }
   .decription {
-    text-align: justify; } }
+    text-align: justify; }
+  .services-page__content {
+    padding-left: 0; }
+    .services-page__content__category {
+      max-width: 200px; } }
 
 @media (max-width: 550px) {
   .home-page__content_menu a {
@@ -626,7 +676,13 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-ordinal-group: 1;
     -webkit-order: 0;
         -ms-flex-order: 0;
-            order: 0; } }
+            order: 0; }
+  .services-page__wrapper {
+    padding-bottom: 10px;
+    padding-left: 10px; }
+  .services-page__content__category {
+    max-width: 100%;
+    margin-bottom: 40px; } }
 
 @media (max-width: 450px) {
   .home-page__header {
