@@ -219,6 +219,10 @@ $semibold:'MyriadProSemibold';
 				font-size: 10px;
 				color: #242424;
 				text-align: center;
+				width: 90%;
+				& div {
+					margin-bottom: 10px;
+				}
 			}
 		}
 	}
@@ -664,6 +668,262 @@ $semibold:'MyriadProSemibold';
 	}
 }
 
+// ================================================Contact Page======================================
+
+.contact-page {
+	width: 100vw;
+	background-color: #151515;
+	&_map {
+		filter: grayscale(1);
+		width: 42%;
+		& iframe {
+			width: 100%;
+		}
+	}
+	&__wrapper {
+		max-width: 1200px;
+		margin: 0 auto;
+		background-color: #fff;
+		display: flex;
+		display: flex;
+	}
+	&__content {
+		padding: 50px 0 20px 75px;
+		background-color: #2046b3;
+		color: #fff;
+		width: 58%;
+		&_title {
+			&:after {
+				left: 0;
+				width: 170px;
+			}
+		}
+		&__form {
+			form {
+				width: 100%;
+				max-width: 410px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				font-family: $semibold;
+				font-size: 16px;
+				margin-bottom: 60px;
+			}
+			input {
+				display: flex;
+				background-color: #2046b3;
+				border: 2px solid #c5c5c5;
+				width: 48%;
+				height: 35px;
+				margin-bottom: 18px;
+				padding-left: 15px;
+				color: #fff;
+				&::placeholder {
+					color: #fff;
+				}
+				&:first-child {
+					width: 100%;
+				}
+			}
+			textarea {
+				display: flex;
+				resize: none;
+				background-color: #2046b3;
+				border: 2px solid #c5c5c5;
+				width: 100%;
+				height: 75px;
+				margin-bottom: 20px;
+				padding-left: 10px;
+				padding-top: 10px;
+				color: #fff;
+				&::placeholder {
+					color: #fff;
+				}
+			}
+			button {
+				width: 110px;
+				height: 35px;
+				text-transform: uppercase;
+				background-color: #ffc600;
+				font-family: $semibold;
+				font-size: 16px;
+				transition: 0.2s;
+				&:active {
+					box-shadow: inset 0 0 0 2px grey;
+				}
+			} 
+		}
+		&__contacts {
+				font-family: $semibold;
+				font-size: 16px;
+				max-width: 410px;
+				padding-bottom: 70px;
+				padding-left: 25px;
+				margin-bottom: 10px;
+				border-bottom: 2px solid #7386bc;
+			&_title {
+				margin-bottom: 35px;
+			}
+			&_values {
+				display: flex;
+				max-width: 270px;
+				margin-bottom: 15px;
+				& div:first-child {
+					width: 25%;
+				}
+				& div:last-child {
+					font-family: $regular;
+					font-size: 12px;
+					width: 75%;
+				}
+			}
+		}
+
+		&__socials {
+			display: flex;
+		}
+	}
+}
+.fa {
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #fff;
+	color: #2046b3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 5px;
+	transition: 0.4s;
+	&:hover {
+		box-shadow: 0px 0px 0px 2px #7386bc;
+		color: #fff;
+		background-color: #2046b3;
+	}
+}
+
+// ================================================NAVIGATION======================================
+.navigation_open {
+	position: fixed;
+	display: none;
+	left: 40px;
+	top: 40px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		top: 6px;
+		left: 0;
+		height: 3px;
+		width: 30px;
+		background-color: #fff;
+		transform: rotate(30deg);
+		box-shadow: 2px 2px 5px #000;
+	}
+	&:after {
+		transform: rotate(-30deg);
+		top: 20px;
+	}
+}
+.navigation_mask {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.8;
+}
+.navigation {
+	position: fixed;
+	color: #fff;
+	background-color: #000;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 30%;
+	opacity: 0.95;
+	padding-top: 50px;
+	padding-left: 30px;
+	transition: 0.5s;
+	transform-origin: left;
+	transform: scaleX(0);
+	z-index: 50;
+		&_close {
+			position: absolute;
+			top: 30px;
+			right: 20px;
+			width: 40px;
+			height: 40px;
+			cursor: pointer;
+
+			&:hover:after {
+				transform: rotate(-30deg);
+				top: 8px;
+			}
+			&:hover:before {
+				transform: rotate(30deg);
+				top: 27px;
+			}
+			&:after, &:before {
+				content: '';
+				position: absolute;
+				top: 18px;
+				height: 3px;
+				width: 40px;
+				transform: rotate(-45deg);
+				background-color: #fff;
+				transition: 0.4s;
+		}
+			&:before {
+				transform: rotate(45deg);
+			}
+		}
+
+	&_title {
+		font-family: $bold;
+		font-size: 60px;
+		letter-spacing: -3px;
+		margin-bottom: 50px;
+		& span {
+			font-size: 60px;
+			color: #ffc600;
+		}
+	}
+	&_socials {
+		padding-top: 10px;
+		display: flex;
+		& .fa {
+			color: #000;
+		}
+	}
+	&__menu {
+		padding-bottom: 50px;
+		border-bottom: 2px solid #ffc600;
+		display: flex;
+		flex-direction: column;
+		width: 35%;
+		&_link {
+			font-family: $semibold;
+			font-size: 16px;
+			text-transform: uppercase;
+			line-height: 2.5;
+			cursor: pointer;
+			transition: 0.4s;
+			&:hover {
+				color: #ffc600;
+			}
+		}
+	}
+}
+
+
+
+
 // ================================================Media Queries======================================
 
 @media (max-width: 1281px) {
@@ -721,6 +981,22 @@ $semibold:'MyriadProSemibold';
 			padding-left: 0;
 		}
 	}
+	.contact-page {
+		padding: 0 20px;
+	}
+	.navigation {
+		width: 40%;
+	}
+	.navigation_title {
+		font-size: 40px;
+		letter-spacing: 0;
+		& span {
+			font-size: 40px;
+		}
+	}
+	.navigation_open {
+		left: 10px;
+	}
 }
 
 @media (max-width: 1025px) {
@@ -768,6 +1044,9 @@ $semibold:'MyriadProSemibold';
 			&_title, &_subtitle {
 			width: 100%;
 		}
+	}
+	.contact-page__content {
+		padding: 50px 20px 20px;
 	}
 }
 
@@ -866,6 +1145,43 @@ $semibold:'MyriadProSemibold';
 	.blog-page__navigation {
 		width: 200px;
 	}
+	.contact-page_map {
+		order: 1;
+		width: 100%;
+	}
+	.contact-page__wrapper {
+		flex-wrap: wrap;
+	}
+	.contact-page__content {
+		width: 100%;
+		padding-top: 20px;
+		&__form {
+			form {
+				max-width: 100%;
+				margin-bottom: 20px;
+			}
+		}
+		&__contacts {
+			padding-left: 0;
+			padding-bottom: 10px;
+			max-width: 100%;
+			font-size: 20px;
+			&_values {
+				max-width: 100%;
+				justify-content: space-between;
+				& div:first-child {
+					max-width: 25%;
+				}
+				& div:last-child {
+					font-size: 18px;
+					max-width: 65%;
+				}
+			}
+		}
+	}
+	.navigation {
+		width: 50%;
+	}
 }
 
 @media (max-width: 550px){
@@ -951,6 +1267,16 @@ $semibold:'MyriadProSemibold';
 			border-bottom: 2px solid #cacaca;
 		}
 	}
+	.navigation {
+		padding-right: 10px;
+		width: 100%;
+		opacity: 1;
+		background: url("../img/game-dev_navigation-bg2.jpg") 50%/cover no-repeat;
+		&__menu {
+			width: 100%;
+		}
+	}
+
 }
 
 @media (max-width: 450px){
@@ -1066,6 +1392,12 @@ $semibold:'MyriadProSemibold';
 		font-size: 150px;
 		}
 	}
+	.navigation_title {
+		margin-bottom: 20px;
+	}
+	.navigation__menu {
+		padding-bottom: 20px;
+	}
 }
 
 @media (max-height: 550px) and (orientation: landscape) {
@@ -1101,6 +1433,15 @@ $semibold:'MyriadProSemibold';
 			}
 		}
 	}
+	.navigation_close {
+		top: 15px;
+	}
+	.navigation {
+		padding-top: 15px;
+		&__menu_link {
+			line-height: 1.8;
+		}
+	}
 }
 
 @media (max-height: 400px) and (orientation: landscape) {
@@ -1113,5 +1454,20 @@ $semibold:'MyriadProSemibold';
 	}
 	.home-page__header_subtitle {
 		font-size: 14px;
+	}
+	.navigation {
+		width: 100%;
+	}
+	.navigation_title {
+		margin-bottom: 5px;
+	}
+	.navigation__menu {
+		width: 100%;
+		flex-wrap: wrap;
+		padding-bottom: 5px;
+		&_link {
+			width: 40%;
+			line-height: 1.6;
+		}
 	}
 }

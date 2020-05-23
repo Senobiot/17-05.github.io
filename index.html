@@ -20,7 +20,7 @@
 					<span>G</span>amelime
 				</h1>
 				<p class="home-page__header_subtitle">
-					<span>G</span>amelime: A one page responsive wordpress theme suitable for any kind of business representation.
+					<span>G</span>amelime: A one page responsive theme suitable for any kind of business representation.
 				</p>
 				<a href="img/snapshot.jpg" download="" class="home-page__header_download">Download the PSD</a>
 			</header>
@@ -29,10 +29,10 @@
 					<span>We</span> create <br>Awesome Games
 				</div>
 				<nav class="home-page__content_menu">
-					<a href="#">About</a>
-					<a href="#">Development</a>
-					<a href="#">Projects</a>
-					<a href="#">Blog</a>
+					<a href="#about-page">About</a>
+					<a href="#works-page">Development</a>
+					<a href="#services-page">Projects</a>
+					<a href="#blog-page">Blog</a>
 				</nav>
 			</div>
 		</div>
@@ -110,7 +110,7 @@
 
 	<!-- =========================================section STRATEGIC-PAGE===================================== -->
 		
-	<section class="strategic-page">
+	<section class="strategic-page" id="strategic-page">
 		<div class="strategic-page__wrapper">
 			<div class="strategic-page_title page-titles"><span>S</span>trategic <span>P</span>rocess</div>
 			<div class="strategic-page_subtitle">
@@ -329,14 +329,72 @@
 			</div>
 		</div>
 	</section>
-	<!-- =========================================section CLIENTS-PAGE======================================= -->
 
-	<section class="clients-page" id="main-page">
-	</section>
 	<!-- =========================================section CONATCT-PAGE======================================= -->
 
-	<section class="contact-page" id="main-page">
+	<section class="contact-page" id="contact-page">
+		<div class="contact-page__wrapper">
+			<div class="contact-page_map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2350.318559406907!2d27.479985418691957!3d53.908314915983034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbc53670090d95%3A0x6d6f1601259b2831!2z0KHQv9C-0YDRgtC40LLQvdCw0Y8!5e0!3m2!1sru!2sby!4v1590229222676!5m2!1sru!2sby" width="500" height="690" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+			<div class="contact-page__content">
+				<div class="contact-page__content_title page-titles"><span>C</span>ontact <span>U</span>s</div>
+				<div class="contact-page__content__form">
+					<form action="#" method="get" name="form">
+						<input type="text" placeholder="Your Name">
+						<input type="phone" placeholder="Mobile">
+						<input type="email" placeholder="Email">
+						<textarea name="#" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+						<button type="submit" form="form">send</button>
+					</form>
+
+				</div>
+				<div class="contact-page__content__contacts">
+					<div class="contact-page__content__contacts_title">Location Map</div>
+					<div class="contact-page__content__contacts_values">
+						<div>Addres</div>
+						<div>Prityckogo, str.</div>
+					</div>
+					<div class="contact-page__content__contacts_values">
+						<div>Phone</div>
+						<div>+375 (25) 709-23-52</div>
+					</div>
+					<div class="contact-page__content__contacts_values">
+						<div>Email</div>
+						<div>inter_net@tut.by</div>
+					</div>
+				</div>
+				<div class="contact-page__content__socials">
+					<i class="fa fa-twitter"></i>
+					<i class="fa fa-linkedin"></i>
+					<i class="fa fa-facebook"></i>
+				</div>
+			</div>
+		</div>
 	</section>
+
+	<!-- ================================================NAVIGATION============================================= -->
+	<div class="navigation_open"></div>
+	<div class="navigation_mask"></div>
+	<div class="navigation">
+		<div class="navigation_close"></div>
+		<div class="navigation_title"><span>G</span>amelime</div>
+		<div class="navigation__menu">
+			<div class="navigation__menu_link" href="#home-page">home</div>
+			<div class="navigation__menu_link" href="#about-page">about gamelime</div>
+			<div class="navigation__menu_link" href="#works-page">our works</div>
+			<div class="navigation__menu_link" href="#services-page">services</div>
+			<div class="navigation__menu_link" href="#team-page">team</div>
+			<div class="navigation__menu_link" href="#testimonials-page">testimonials</div>
+			<div class="navigation__menu_link" href="#blog-page">blog</div>
+			<div class="navigation__menu_link" href="#contact-page">contact us</div>
+		</div>
+		<div class="navigation_socials">
+			<i class="fa fa-twitter"></i>
+			<i class="fa fa-linkedin"></i>
+			<i class="fa fa-facebook"></i>
+		</div>
+	</div>
 
 	<!-- ================================================SCRIPTS============================================= -->
 	<script type="text/javascript">
@@ -402,6 +460,38 @@
 				let elem = $(".blog-page__content__article");
 				$(elem).not("."+value).removeClass("active");
 				$(elem).filter("."+value).addClass("active");
+			});
+
+			// ==========================NAVIGATION==========================
+			$(".navigation_close").click(function(){
+				$(".navigation").css("transform", "scaleX(0)");
+				$('body').css("overflow", "visible");
+				$(".navigation_mask").css("display", "none");
+			})
+			$(".navigation_open").click(function(){
+				$(".navigation").css("transform", "scaleX(1)");
+				$('body').css("overflow", "hidden");
+				$(".navigation_mask").css("display", "block");
+			});
+
+			$(window).scroll(function(){
+				let scroll = $(window).scrollTop();
+				console.log(scroll);
+				if (scroll > 900) {
+					$(".navigation_open").show("slow");
+				} else {
+					$(".navigation_open").hide("slow");
+				}
+			});
+
+			$(".home-page__content_menu a, .navigation__menu_link").click(function(event){
+				event.preventDefault();
+				let id=$(this).attr("href");
+				let offset=$(id).offset().top;
+				$("body, html").animate({scrollTop: offset}, 1000);
+				$(".navigation").css("transform", "scaleX(0)");
+				$('body').css("overflow", "visible");
+				$(".navigation_mask").css("display", "none");
 			});
 		});
 	</script>
